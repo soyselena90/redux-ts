@@ -1,0 +1,56 @@
+.container {
+   min-width: 1200px;
+   max-width: 1920px;
+   width: 100%;
+   height: auto;
+   padding: 3em;
+   margin: 0 auto;
+   text-align: center;
+}
+h1 {
+   text-transform: uppercase;
+}
+
+input {
+   margin-top: 1.5em;
+   border: 2px solid rgb(99, 99, 238);
+   border-radius: 0.25em;
+   font-size: 1.2em;
+   line-height: 1.85;
+   text-indent: 0.5em;
+}
+input:focus {
+   outline: 2px solid rgb(99, 99, 238, 0.5);
+}
+button {
+   outline: none;
+   cursor: pointer;
+   background-color: rgb(99, 99, 238);
+   border-radius: 0.25em;
+   font-size: 1em;
+   line-height: 1.85;
+   text-indent: 0.5em;
+   color: #fff;
+   margin-left: 1em;
+   padding: 0.2em;
+   text-align: center;
+   width: 8em;
+}
+h3 {
+   margin-top: 2em;
+   font-size: 2em;
+}
+.error {
+   color: rgb(201, 47, 47);
+}
+.loading {
+   color: rgb(39, 36, 36);
+}
+.datalist {
+   margin-top: 2em;
+   font-size: 1.5em;
+   line-height: 1.25;
+}
+.datalist div {
+   margin-top: 0.25em;
+}
