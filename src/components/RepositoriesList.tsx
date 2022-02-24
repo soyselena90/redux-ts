@@ -14,10 +14,15 @@ const RepositoriesList: React.FC = () => {
       searchRepositories(term);
    };
 
+   console.log(data);
    return (
       <div>
          <form onSubmit={handleSubmit}>
-            <input value={term} onChange={(e) => setTerm(e.target.value)} />
+            <input
+               value={term}
+               onChange={(e) => setTerm(e.target.value)}
+               placeholder="Please enter a word"
+            />
             <button>Search</button>
          </form>
          {error && <h3 className="error">{error}😱</h3>}

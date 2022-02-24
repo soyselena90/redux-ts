@@ -1,46 +1,46 @@
-# Getting Started with Create React App
+# Redux with TypeScript
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is all about understanding **Redux** & **TypeScript** together
 
-## Available Scripts
+## Process
 
-In the project directory, you can run:
+1. User, Search some package name in a input
+2. click on submit button
+3. take that search term and search of the NPM API
 
-### `npm start`
+## Install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    npx create-react-app redux-ts --template typescript
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Setting
 
-### `npm test`
+    npm install --save-exact @types/react-redux@7.1.15 axios@0.21.1 react-redux@7.2.2 redux@4.0.5 redux-thunk@2.3.0
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## API
 
-### `npm run build`
+> registry.npmjs.org/-/v1/search?text=react
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Redux Store
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Fetching 'packages' from NPM
+2. 'package' is a reserved keyword in Typescript
+3. Call NPM packages 'repositories
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+repositories
+-> data : List of repositories from NPM
+-> loading : True/false whether we are fetching data
+-> error : String , error message if one occurred during fetch
 
-### `npm run eject`
+## Separate interfaces for Actions
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+-  SearchRepositories Action
+-  SearchRepositoriesSuccess Action
+-  SearchRepositoriesError Action
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+⇒ **Repositories Reducer**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Big Issues with Redux/React-Redux + TS
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+-  Imports between files can turn into a mess very quickly
+-  Communicating types over to you components can be challenging
+-  Type definition files for Redux, React-Redux, and others are possibly over-engineered
